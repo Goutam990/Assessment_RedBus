@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Booking Online at Cheapest Price with Top Bus Operators- redBus</title>
+    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- navbar section -->
+        <div class="navbar-container">
+            <div class="nav-space">
+                <div class="left-navbar">
+                    <div class="left-items"><img src="./assets/bus.png" alt="left-image-2" width="80" id="one-img">
+                    </div>
+                    <div class="left-items" id="one-via-one"><img src="./assets/bus.png" alt="left-image-1"
+                            id="two-img">
+                        <p>bus ticket</p>
+                    </div>
+
+                    <div class="left-items" id="one-via-two"><img class="lobImg___8586e0"
+                            src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAxIiBoZWlnaHQ9IjU1IiB2aWV3Qm94PSIwIDAgMTAxIDU1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBpZD0iTG9nbz1yZWRSYWlsIj4KPGcgaWQ9IlZlY3RvciI+CjxwYXRoIGQ9Ik05OS41NDQ4IDM3LjAwODdMOTcuMjkxMyAzOS43NDgySDk1Ljk3NjJMOTYuMzQ2NiAzMC4yNjQ5Qzk2LjM3NzcgMjkuMzk4NCA5Ni4yMzYyIDI4LjUzNDQgOTUuOTMwNCAyNy43MjMyTDg4Ljk3NDEgOS4wNzkyOEM4OC41MDQ2IDcuODMzODQgODcuNjY4MSA2Ljc2MDcgODYuNTc1NSA2LjAwMjA3Qzg1LjQ4MyA1LjI0MzQzIDg0LjE4NTkgNC44MzUxOSA4Mi44NTYzIDQuODMxNDFINzAuOTMwOUw2OC43NjY4IDIuNDAwMTZDNjguMzc0NyAxLjk1OTQ2IDY3Ljg5MzkgMS42MDY5IDY3LjM1NTkgMS4zNjU2QzY2LjgxNzkgMS4xMjQzMSA2Ni4yMzUgMC45OTk1OTIgNjUuNjQ1NSAxSDU5LjY5NDNDNTguODIyMiAwLjk5OTMxMyA1Ny45NzE4IDEuMjcyNDMgNTcuMjYyNiAxLjc4MDY1QzU2LjU1MzQgMi4yODg4NiA1Ni4wMjEyIDMuMDA2NzQgNTUuNzQwNiAzLjgzMzQ4TDU1LjQwMTQgNC44MzE0MUgwLjVWOC43ODk3Nkg4Mi44NjQ2QzgzLjM4ODEgOC43OTA2NCA4My44OTkgOC45NTAzOSA4NC4zMyA5LjI0Nzk0Qzg0Ljc2MDkgOS41NDU0OSA4NS4wOTE2IDkuOTY2ODYgODUuMjc4NSAxMC40NTY0TDkyLjIzNDggMjkuMDk4MUM5Mi4zNTUyIDI5LjQxODYgOTIuNDA5NyAyOS43NjAyIDkyLjM5NSAzMC4xMDI0TDkxLjk2NjMgNDEuMTI3NEM5MS45NDIxIDQxLjc5MzkgOTEuNjYgNDIuNDI0OSA5MS4xNzk3IDQyLjg4NzFDOTAuNjk5NCA0My4zNDkzIDkwLjA1ODUgNDMuNjA2NSA4OS4zOTIzIDQzLjYwNDRIODAuMjk0OEM3OS43ODU0IDQzLjYwNSA3OS4yODc0IDQzLjQ1NDUgNzguODYzNiA0My4xNzE1Qzc4LjQzOTkgNDIuODg4NSA3OC4xMDk1IDQyLjQ4NTkgNzcuOTE0MyA0Mi4wMTQ5TDc2LjE4OTMgMzcuODQ4MkM3NS43NDEgMzYuNzU4OSA3NC45Nzg5IDM1LjgyNzkgNzQuMDAwMiAzNS4xNzM4QzczLjAyMTUgMzQuNTE5NyA3MS44NzA0IDM0LjE3MiA3MC42OTM3IDM0LjE3NTNINzAuNjc1TDE3LjIyMzkgMzQuMzgzNkMxNi4xMTM5IDM0LjM4MzEgMTUuMDI2MSAzNC42OTU0IDE0LjA4NTIgMzUuMjg0OUMxMy4xNDQyIDM1Ljg3NDQgMTIuMzg4IDM2LjcxNzIgMTEuOTAzMSAzNy43MTY5TDExLjA0MzcgMzkuNDYwN0MxMC44Mjk5IDM5Ljg5MjEgMTAuNTAwNCA0MC4yNTUzIDEwLjA5MjEgNDAuNTA5OUM5LjY4Mzg0IDQwLjc2NDUgOS4yMTI4OCA0MC45MDA0IDguNzMxODkgNDAuOTAyNEgwLjVWNDQuODYwOEg4LjczMTg5QzkuNzg0ODQgNDQuODU2MiAxMC44MjEzIDQ0LjU5ODcgMTEuNzU0MSA0NC4xMDk2QzEyLjY4NjkgNDMuNjIwNSAxMy40ODg3IDQyLjkxNDIgMTQuMDkyMiA0Mi4wNTAzQzEzLjQwNiA0NC41MzgxIDEzLjY4NDYgNDcuMTkzNyAxNC44NzIyIDQ5LjQ4NDRDMTYuMDU5OCA1MS43NzUxIDE4LjA2ODYgNTMuNTMxNyAyMC40OTU2IDU0LjQwMTZDMjIuOTIyNyA1NS4yNzE1IDI1LjU4ODQgNTUuMTkwNCAyNy45NTgzIDU0LjE3NDhDMzAuMzI4MiA1My4xNTkxIDMyLjIyNjkgNTEuMjgzOSAzMy4yNzM2IDQ4LjkyNTNIMjguNjIyOEMyNy43Nzg5IDQ5Ljg3NTYgMjYuNjY2NCA1MC41NDY3IDI1LjQzMjggNTAuODQ5NEMyNC4xOTkzIDUxLjE1MiAyMi45MDI5IDUxLjA3MiAyMS43MTU4IDUwLjYyMDFDMjAuNTI4NiA1MC4xNjgxIDE5LjUwNjggNDkuMzY1NCAxOC43ODU4IDQ4LjMxODZDMTguMDY0NyA0Ny4yNzE4IDE3LjY3ODYgNDYuMDMwMiAxNy42Nzg2IDQ0Ljc1ODZDMTcuNjc4NiA0My40ODcgMTguMDY0NyA0Mi4yNDU0IDE4Ljc4NTggNDEuMTk4NkMxOS41MDY4IDQwLjE1MTggMjAuNTI4NiAzOS4zNDkzIDIxLjcxNTggMzguODk3NEMyMi45MDI5IDM4LjQ0NTQgMjQuMTk5MyAzOC4zNjU0IDI1LjQzMjggMzguNjY4MUMyNi42NjY0IDM4Ljk3MDggMjcuNzc4OSAzOS42NDE2IDI4LjYyMjggNDAuNTkxOUgzMy4yNjczQzMyLjg5NiAzOS43NjQyIDMyLjQxNjcgMzguOTg5NSAzMS44NDE5IDM4LjI4NzhMMzYuMTU5NyAzOC4yNjkxQzM1LjU3NzUgMzguOTc1IDM1LjA5MzIgMzkuNzU2MyAzNC43MTk4IDQwLjU5MTlIMzkuMzcwNUMzOS45NTczIDM5LjkzMDQgNDAuNjc3NiAzOS40MDEgNDEuNDgzNyAzOS4wMzg0QzQyLjI4OTggMzguNjc1OCA0My4xNjM1IDM4LjQ4ODIgNDQuMDQ3MiAzOC40ODgyQzQ0LjkzMSAzOC40ODgyIDQ1LjgwNDcgMzguNjc1OCA0Ni42MTA4IDM5LjAzODRDNDcuNDE2OSAzOS40MDEgNDguMTM3MSAzOS45MzA0IDQ4LjcyNCA0MC41OTE5SDUzLjM3NjhDNTIuOTkwOCAzOS43MzIyIDUyLjQ4ODggMzguOTI5NyA1MS44ODQ4IDM4LjIwNjdMNTYuMzM1OCAzOC4xODc3QzU1LjcyNCAzOC45MTUyIDU1LjIxNjIgMzkuNzI0NCA1NC44MjcxIDQwLjU5MTlINTkuNDg2MkM2MC4zMzAyIDM5LjY0MDkgNjEuNDQzMSAzOC45NjkzIDYyLjY3NzEgMzguNjY2M0M2My45MTEyIDM4LjM2MzIgNjUuMjA4MSAzOC40NDI5IDY2LjM5NTkgMzguODk0OUM2Ny41ODM2IDM5LjM0NjkgNjguNjA2MSA0MC4xNDk5IDY5LjMyNzUgNDEuMTk3MkM3MC4wNDg5IDQyLjI0NDQgNzAuNDM1MyA0My40ODY1IDcwLjQzNTMgNDQuNzU4NkM3MC40MzUzIDQ2LjAzMDggNzAuMDQ4OSA0Ny4yNzMgNjkuMzI3NSA0OC4zMjAyQzY4LjYwNjEgNDkuMzY3NSA2Ny41ODM2IDUwLjE3MDMgNjYuMzk1OSA1MC42MjIzQzY1LjIwODEgNTEuMDc0MyA2My45MTEyIDUxLjE1NDEgNjIuNjc3MSA1MC44NTFDNjEuNDQzMSA1MC41NDc5IDYwLjMzMDIgNDkuODc2MyA1OS40ODYyIDQ4LjkyNTNINTQuODMzNEM1NS43ODY4IDUxLjA2NDkgNTcuNDQ0OSA1Mi44MTIgNTkuNTMwNSA1My44NzQ1QzYxLjYxNjEgNTQuOTM3IDY0LjAwMjcgNTUuMjUwNiA2Ni4yOTE1IDU0Ljc2MjhDNjguNTgwMyA1NC4yNzQ5IDcwLjYzMjQgNTMuMDE1MSA3Mi4xMDQ4IDUxLjE5NDJDNzMuNTc3MyA0OS4zNzMzIDc0LjM4MDggNDcuMTAxNSA3NC4zODEgNDQuNzU4NkM3NC4zODA4IDQ0LjM5MzIgNzQuMzYwNyA0NC4wMjgxIDc0LjMyMDYgNDMuNjY0OUM3NC44Mjk3IDQ0LjgyNTEgNzUuNjY1NSA0NS44MTE1IDc2LjcyNTggNDYuNTAzNEM3Ny43ODYxIDQ3LjE5NTQgNzkuMDI1IDQ3LjU2MjggODAuMjkwNiA0Ny41NjA4SDg5LjM5MjNDOTAuNjYxMyA0Ny41NjQ0IDkxLjkwMzYgNDcuMTk2NiA5Mi45NjY1IDQ2LjUwMjZDOTQuMDI5NCA0NS44MDg2IDk0Ljg2NjUgNDQuODE4NiA5NS4zNzQ4IDQzLjY1NDVIOTcuNDQzMkw5OS41NDkgNDUuOTE5MUM5OS42MjI4IDQ1Ljk5NzkgOTkuNzE4NSA0Ni4wNTI4IDk5LjgyMzcgNDYuMDc2NkM5OS45MjkgNDYuMTAwNCAxMDAuMDM5IDQ2LjA5MTkgMTAwLjEzOSA0Ni4wNTI0QzEwMC4yNCA0Ni4wMTI5IDEwMC4zMjYgNDUuOTQ0MiAxMDAuMzg3IDQ1Ljg1NUMxMDAuNDQ4IDQ1Ljc2NTkgMTAwLjQ4MSA0NS42NjA1IDEwMC40ODEgNDUuNTUyNUwxMDAuNSAzNy4zNTg3QzEwMC41MDEgMzcuMjQ2OSAxMDAuNDY4IDM3LjEzNzQgMTAwLjQwNSAzNy4wNDU0QzEwMC4zNDIgMzYuOTUzMyAxMDAuMjUxIDM2Ljg4MzIgMTAwLjE0NiAzNi44NDQ4QzEwMC4wNDEgMzYuODA2MyA5OS45MjcyIDM2LjgwMTMgOTkuODE5NSAzNi44MzA3Qzk5LjcxMTggMzYuODYwMSA5OS42MTU4IDM2LjkyMjQgOTkuNTQ0OCAzNy4wMDg3WiIgZmlsbD0iI0Q4NEU1NSIvPgo8cGF0aCBkPSJNNDQuMDU0NiA1MS4wMjM4QzQzLjE3MDMgNTEuMDI0NCA0Mi4yOTYxIDUwLjgzNjkgNDEuNDg5NiA1MC40NzM4QzQwLjY4MzIgNTAuMTEwNyAzOS45NjMgNDkuNTgwMiAzOS4zNzY4IDQ4LjkxNzRIMzQuNzI0QzM1LjUyNjcgNTAuNzIzMiAzNi44MzUyIDUyLjI1NzMgMzguNDkwOCA1My4zMzM5QzQwLjE0NjQgNTQuNDEwNSA0Mi4wNzgzIDU0Ljk4MzUgNDQuMDUyNSA1NC45ODM1QzQ2LjAyNjcgNTQuOTgzNSA0Ny45NTg1IDU0LjQxMDUgNDkuNjE0MiA1My4zMzM5QzUxLjI2OTggNTIuMjU3MyA1Mi41NzgyIDUwLjcyMzIgNTMuMzgxIDQ4LjkxNzRINDguNzMwM0M0OC4xNDQyIDQ5LjU3OTkgNDcuNDI0NCA1MC4xMTAzIDQ2LjYxODQgNTAuNDczNEM0NS44MTIzIDUwLjgzNjUgNDQuOTM4NCA1MS4wMjQxIDQ0LjA1NDYgNTEuMDIzOFoiIGZpbGw9IiNEODRFNTUiLz4KPHBhdGggZD0iTTY2LjE0NDkgNDQuNzUwNkM2Ni4xNDQ5IDQ0LjIyNTcgNjUuOTM2NyA0My43MjI1IDY1LjU2NTkgNDMuMzUxM0M2NS4xOTUyIDQyLjk4MDEgNjQuNjkyNCA0Mi43NzE1IDY0LjE2ODEgNDIuNzcxNUgyMy45NDVDMjMuNDIwOCA0Mi43NzE1IDIyLjkxNzkgNDIuOTgwMSAyMi41NDcyIDQzLjM1MTNDMjIuMTc2NSA0My43MjI1IDIxLjk2ODIgNDQuMjI1NyAyMS45NjgyIDQ0Ljc1MDZDMjEuOTY4MiA0NS4yNzU1IDIyLjE3NjUgNDUuNzc5IDIyLjU0NzIgNDYuMTUwMkMyMi45MTc5IDQ2LjUyMTMgMjMuNDIwOCA0Ni43Mjk4IDIzLjk0NSA0Ni43Mjk4SDY0LjE2MTlDNjQuNDIyIDQ2LjczMDYgNjQuNjc5NyA0Ni42ODAyIDY0LjkyMDMgNDYuNTgxMUM2NS4xNjA4IDQ2LjQ4MiA2NS4zNzk1IDQ2LjMzNjMgNjUuNTYzNyA0Ni4xNTI0QzY1Ljc0NzkgNDUuOTY4NSA2NS44OTQxIDQ1Ljc1IDY1Ljk5MzggNDUuNTA5NUM2Ni4wOTM2IDQ1LjI2OSA2Ni4xNDQ5IDQ1LjAxMTEgNjYuMTQ0OSA0NC43NTA2WiIgZmlsbD0iI0Q4NEU1NSIvPgo8cGF0aCBkPSJNMC41MTE5NjMgMjlWMTcuNzAySDMuNjQwOTZWMjAuODk0TDMuMTk5OTYgMTkuOTdDMy41MzU5NiAxOS4xNzIgNC4wNzQ5NiAxOC41NyA0LjgxNjk2IDE4LjE2NEM1LjU1ODk2IDE3Ljc0NCA2LjQ2MTk2IDE3LjUzNCA3LjUyNTk2IDE3LjUzNFYyMC41NThDNy4zODU5NiAyMC41NDQgNy4yNTk5NiAyMC41MzcgNy4xNDc5NiAyMC41MzdDNy4wMzU5NiAyMC41MjMgNi45MTY5NiAyMC41MTYgNi43OTA5NiAyMC41MTZDNS44OTQ5NiAyMC41MTYgNS4xNjY5NiAyMC43NzUgNC42MDY5NiAyMS4yOTNDNC4wNjA5NiAyMS43OTcgMy43ODc5NiAyMi41ODggMy43ODc5NiAyMy42NjZWMjlIMC41MTE5NjNaIiBmaWxsPSIjRDg0RTU1Ii8+CjxwYXRoIGQ9Ik0xNC45OTg4IDI5LjE2OEMxMy43MTA4IDI5LjE2OCAxMi41NzY4IDI4LjkxNiAxMS41OTY4IDI4LjQxMkMxMC42MzA4IDI3LjkwOCA5Ljg4MTg1IDI3LjIyMiA5LjM0OTg1IDI2LjM1NEM4LjgxNzg1IDI1LjQ3MiA4LjU1MTg1IDI0LjQ3MSA4LjU1MTg1IDIzLjM1MUM4LjU1MTg1IDIyLjIxNyA4LjgxMDg1IDIxLjIxNiA5LjMyODg1IDIwLjM0OEM5Ljg2MDg1IDE5LjQ2NiAxMC41ODE4IDE4Ljc4IDExLjQ5MTggMTguMjlDMTIuNDAxOCAxNy43ODYgMTMuNDMwOCAxNy41MzQgMTQuNTc4OCAxNy41MzRDMTUuNjg0OCAxNy41MzQgMTYuNjc4OCAxNy43NzIgMTcuNTYwOCAxOC4yNDhDMTguNDU2OCAxOC43MSAxOS4xNjM4IDE5LjM4MiAxOS42ODE4IDIwLjI2NEMyMC4xOTk4IDIxLjEzMiAyMC40NTg4IDIyLjE3NSAyMC40NTg4IDIzLjM5M0MyMC40NTg4IDIzLjUxOSAyMC40NTE4IDIzLjY2NiAyMC40Mzc4IDIzLjgzNEMyMC40MjM4IDIzLjk4OCAyMC40MDk4IDI0LjEzNSAyMC4zOTU4IDI0LjI3NUgxMS4yMTg4VjIyLjM2NEgxOC42NzM4TDE3LjQxMzggMjIuOTMxQzE3LjQxMzggMjIuMzQzIDE3LjI5NDggMjEuODMyIDE3LjA1NjggMjEuMzk4QzE2LjgxODggMjAuOTY0IDE2LjQ4OTggMjAuNjI4IDE2LjA2OTggMjAuMzlDMTUuNjQ5OCAyMC4xMzggMTUuMTU5OCAyMC4wMTIgMTQuNTk5OCAyMC4wMTJDMTQuMDM5OCAyMC4wMTIgMTMuNTQyOCAyMC4xMzggMTMuMTA4OCAyMC4zOUMxMi42ODg4IDIwLjYyOCAxMi4zNTk4IDIwLjk3MSAxMi4xMjE4IDIxLjQxOUMxMS44ODM4IDIxLjg1MyAxMS43NjQ4IDIyLjM3MSAxMS43NjQ4IDIyLjk3M1YyMy40NzdDMTEuNzY0OCAyNC4wOTMgMTEuODk3OCAyNC42MzkgMTIuMTYzOCAyNS4xMTVDMTIuNDQzOCAyNS41NzcgMTIuODI4OCAyNS45MzQgMTMuMzE4OCAyNi4xODZDMTMuODIyOCAyNi40MjQgMTQuNDEwOCAyNi41NDMgMTUuMDgyOCAyNi41NDNDMTUuNjg0OCAyNi41NDMgMTYuMjA5OCAyNi40NTIgMTYuNjU3OCAyNi4yN0MxNy4xMTk4IDI2LjA4OCAxNy41Mzk4IDI1LjgxNSAxNy45MTc4IDI1LjQ1MUwxOS42NjA4IDI3LjM0MUMxOS4xNDI4IDI3LjkyOSAxOC40OTE4IDI4LjM4NCAxNy43MDc4IDI4LjcwNkMxNi45MjM4IDI5LjAxNCAxNi4wMjA4IDI5LjE2OCAxNC45OTg4IDI5LjE2OFoiIGZpbGw9IiNEODRFNTUiLz4KPHBhdGggZD0iTTI3LjQ5MDkgMjkuMTY4QzI2LjQyNjkgMjkuMTY4IDI1LjQ2NzkgMjguOTMgMjQuNjEzOSAyOC40NTRDMjMuNzU5OSAyNy45NjQgMjMuMDgwOSAyNy4yODUgMjIuNTc2OSAyNi40MTdDMjIuMDg2OSAyNS41NDkgMjEuODQxOSAyNC41MjcgMjEuODQxOSAyMy4zNTFDMjEuODQxOSAyMi4xNjEgMjIuMDg2OSAyMS4xMzIgMjIuNTc2OSAyMC4yNjRDMjMuMDgwOSAxOS4zOTYgMjMuNzU5OSAxOC43MjQgMjQuNjEzOSAxOC4yNDhDMjUuNDY3OSAxNy43NzIgMjYuNDI2OSAxNy41MzQgMjcuNDkwOSAxNy41MzRDMjguNDQyOSAxNy41MzQgMjkuMjc1OSAxNy43NDQgMjkuOTg5OSAxOC4xNjRDMzAuNzAzOSAxOC41ODQgMzEuMjU2OSAxOS4yMjEgMzEuNjQ4OSAyMC4wNzVDMzIuMDQwOSAyMC45MjkgMzIuMjM2OSAyMi4wMjEgMzIuMjM2OSAyMy4zNTFDMzIuMjM2OSAyNC42NjcgMzIuMDQ3OSAyNS43NTkgMzEuNjY5OSAyNi42MjdDMzEuMjkxOSAyNy40ODEgMzAuNzQ1OSAyOC4xMTggMzAuMDMxOSAyOC41MzhDMjkuMzMxOSAyOC45NTggMjguNDg0OSAyOS4xNjggMjcuNDkwOSAyOS4xNjhaTTI4LjA1NzkgMjYuNDhDMjguNTg5OSAyNi40OCAyOS4wNzI5IDI2LjM1NCAyOS41MDY5IDI2LjEwMkMyOS45NDA5IDI1Ljg1IDMwLjI4MzkgMjUuNDkzIDMwLjUzNTkgMjUuMDMxQzMwLjgwMTkgMjQuNTU1IDMwLjkzNDkgMjMuOTk1IDMwLjkzNDkgMjMuMzUxQzMwLjkzNDkgMjIuNjkzIDMwLjgwMTkgMjIuMTMzIDMwLjUzNTkgMjEuNjcxQzMwLjI4MzkgMjEuMjA5IDI5Ljk0MDkgMjAuODUyIDI5LjUwNjkgMjAuNkMyOS4wNzI5IDIwLjM0OCAyOC41ODk5IDIwLjIyMiAyOC4wNTc5IDIwLjIyMkMyNy41MTE5IDIwLjIyMiAyNy4wMjE5IDIwLjM0OCAyNi41ODc5IDIwLjZDMjYuMTUzOSAyMC44NTIgMjUuODAzOSAyMS4yMDkgMjUuNTM3OSAyMS42NzFDMjUuMjg1OSAyMi4xMzMgMjUuMTU5OSAyMi42OTMgMjUuMTU5OSAyMy4zNTFDMjUuMTU5OSAyMy45OTUgMjUuMjg1OSAyNC41NTUgMjUuNTM3OSAyNS4wMzFDMjUuODAzOSAyNS40OTMgMjYuMTUzOSAyNS44NSAyNi41ODc5IDI2LjEwMkMyNy4wMjE5IDI2LjM1NCAyNy41MTE5IDI2LjQ4IDI4LjA1NzkgMjYuNDhaTTMxLjAxODkgMjlWMjYuNjlMMzEuMDgxOSAyMy4zM0wzMC44NzE5IDE5Ljk5MVYxMy40MThIMzQuMTQ3OVYyOUgzMS4wMTg5WiIgZmlsbD0iI0Q4NEU1NSIvPgo8cGF0aCBkPSJNMzcuNDEwOSAyOVYxNC4zSDQzLjc3MzlDNDUuMDg5OSAxNC4zIDQ2LjIyMzkgMTQuNTE3IDQ3LjE3NTkgMTQuOTUxQzQ4LjEyNzkgMTUuMzcxIDQ4Ljg2MjkgMTUuOTggNDkuMzgwOSAxNi43NzhDNDkuODk4OSAxNy41NzYgNTAuMTU3OSAxOC41MjggNTAuMTU3OSAxOS42MzRDNTAuMTU3OSAyMC43MjYgNDkuODk4OSAyMS42NzEgNDkuMzgwOSAyMi40NjlDNDguODYyOSAyMy4yNTMgNDguMTI3OSAyMy44NTUgNDcuMTc1OSAyNC4yNzVDNDYuMjIzOSAyNC42OTUgNDUuMDg5OSAyNC45MDUgNDMuNzczOSAyNC45MDVIMzkuMzAwOUw0MC44MTI5IDIzLjQxNFYyOUgzNy40MTA5Wk00Ni43NTU5IDI5TDQzLjA4MDkgMjMuNjY2SDQ2LjcxMzlMNTAuNDMwOSAyOUg0Ni43NTU5Wk00MC44MTI5IDIzLjc5MkwzOS4zMDA5IDIyLjE5Nkg0My41ODQ5QzQ0LjYzNDkgMjIuMTk2IDQ1LjQxODkgMjEuOTcyIDQ1LjkzNjkgMjEuNTI0QzQ2LjQ1NDkgMjEuMDYyIDQ2LjcxMzkgMjAuNDMyIDQ2LjcxMzkgMTkuNjM0QzQ2LjcxMzkgMTguODIyIDQ2LjQ1NDkgMTguMTkyIDQ1LjkzNjkgMTcuNzQ0QzQ1LjQxODkgMTcuMjk2IDQ0LjYzNDkgMTcuMDcyIDQzLjU4NDkgMTcuMDcySDM5LjMwMDlMNDAuODEyOSAxNS40NTVWMjMuNzkyWiIgZmlsbD0iI0Q4NEU1NSIvPgo8cGF0aCBkPSJNNTkuNDQ5OCAyOVYyNi43OTVMNTkuMjM5OCAyNi4zMTJWMjIuMzY0QzU5LjIzOTggMjEuNjY0IDU5LjAyMjggMjEuMTE4IDU4LjU4ODggMjAuNzI2QzU4LjE2ODggMjAuMzM0IDU3LjUxNzggMjAuMTM4IDU2LjYzNTggMjAuMTM4QzU2LjAzMzggMjAuMTM4IDU1LjQzODggMjAuMjM2IDU0Ljg1MDggMjAuNDMyQzU0LjI3NjggMjAuNjE0IDUzLjc4NjggMjAuODY2IDUzLjM4MDggMjEuMTg4TDUyLjIwNDggMTguODk5QzUyLjgyMDggMTguNDY1IDUzLjU2MjggMTguMTI5IDU0LjQzMDggMTcuODkxQzU1LjI5ODggMTcuNjUzIDU2LjE4MDggMTcuNTM0IDU3LjA3NjggMTcuNTM0QzU4Ljc5ODggMTcuNTM0IDYwLjEzNTggMTcuOTQgNjEuMDg3OCAxOC43NTJDNjIuMDM5OCAxOS41NjQgNjIuNTE1OCAyMC44MzEgNjIuNTE1OCAyMi41NTNWMjlINTkuNDQ5OFpNNTYuMDA1OCAyOS4xNjhDNTUuMTIzOCAyOS4xNjggNTQuMzY3OCAyOS4wMjEgNTMuNzM3OCAyOC43MjdDNTMuMTA3OCAyOC40MTkgNTIuNjI0OCAyOC4wMDYgNTIuMjg4OCAyNy40ODhDNTEuOTUyOCAyNi45NyA1MS43ODQ4IDI2LjM4OSA1MS43ODQ4IDI1Ljc0NUM1MS43ODQ4IDI1LjA3MyA1MS45NDU4IDI0LjQ4NSA1Mi4yNjc4IDIzLjk4MUM1Mi42MDM4IDIzLjQ3NyA1My4xMjg4IDIzLjA4NSA1My44NDI4IDIyLjgwNUM1NC41NTY4IDIyLjUxMSA1NS40ODc4IDIyLjM2NCA1Ni42MzU4IDIyLjM2NEg1OS42Mzg4VjI0LjI3NUg1Ni45OTI4QzU2LjIyMjggMjQuMjc1IDU1LjY5MDggMjQuNDAxIDU1LjM5NjggMjQuNjUzQzU1LjExNjggMjQuOTA1IDU0Ljk3NjggMjUuMjIgNTQuOTc2OCAyNS41OThDNTQuOTc2OCAyNi4wMTggNTUuMTM3OCAyNi4zNTQgNTUuNDU5OCAyNi42MDZDNTUuNzk1OCAyNi44NDQgNTYuMjUwOCAyNi45NjMgNTYuODI0OCAyNi45NjNDNTcuMzcwOCAyNi45NjMgNTcuODYwOCAyNi44MzcgNTguMjk0OCAyNi41ODVDNTguNzI4OCAyNi4zMTkgNTkuMDQzOCAyNS45MzQgNTkuMjM5OCAyNS40M0w1OS43NDM4IDI2Ljk0MkM1OS41MDU4IDI3LjY3IDU5LjA3MTggMjguMjIzIDU4LjQ0MTggMjguNjAxQzU3LjgxMTggMjguOTc5IDU2Ljk5OTggMjkuMTY4IDU2LjAwNTggMjkuMTY4WiIgZmlsbD0iI0Q4NEU1NSIvPgo8cGF0aCBkPSJNNjUuNDgwNyAyOVYxNy43MDJINjguNzU2N1YyOUg2NS40ODA3Wk02Ny4xMTg3IDE2LjEyN0M2Ni41MTY3IDE2LjEyNyA2Ni4wMjY3IDE1Ljk1MiA2NS42NDg3IDE1LjYwMkM2NS4yNzA3IDE1LjI1MiA2NS4wODE3IDE0LjgxOCA2NS4wODE3IDE0LjNDNjUuMDgxNyAxMy43ODIgNjUuMjcwNyAxMy4zNDggNjUuNjQ4NyAxMi45OThDNjYuMDI2NyAxMi42NDggNjYuNTE2NyAxMi40NzMgNjcuMTE4NyAxMi40NzNDNjcuNzIwNyAxMi40NzMgNjguMjEwNyAxMi42NDEgNjguNTg4NyAxMi45NzdDNjguOTY2NyAxMy4yOTkgNjkuMTU1NyAxMy43MTkgNjkuMTU1NyAxNC4yMzdDNjkuMTU1NyAxNC43ODMgNjguOTY2NyAxNS4yMzggNjguNTg4NyAxNS42MDJDNjguMjI0NyAxNS45NTIgNjcuNzM0NyAxNi4xMjcgNjcuMTE4NyAxNi4xMjdaIiBmaWxsPSIjRDg0RTU1Ii8+CjxwYXRoIGQ9Ik03MS43OTcxIDI5VjEzLjQxOEg3NS4wNzMxVjI5SDcxLjc5NzFaIiBmaWxsPSIjRDg0RTU1Ii8+CjwvZz4KPC9nPgo8L3N2Zz4K"
+                            alt="Online Train Tickets Booking" title="Online Train Tickets Booking" width="70"
+                            height="20"><!--<img src="./assets/rail.svg" alt="left-image-3"  id="three-img"> -->
+                        <p>train ticket</p>
+                    </div>
+                </div>
+                <div class="right-navbar">
+                    <div class="right-images-icon">
+
+                        <img src="./assets/menu.png" alt="menu" width="50">
+                        <p>Booking</p>
+                    </div>
+                    <div class="right-images-icon">
+
+                        <img src="./assets/help.png" alt="menu" width="50">
+                        <p>Help</p>
+                    </div>
+                    <div class="right-images-icon">
+
+                        <img src="./assets/account.png" alt="" width="40">
+                        <p>Account</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section no1 -->
+        <section class="section-1">
+            <div class="section1-data">
+                <div class="img-container">
+                    <img src="./assets/HomeBanner.webp" alt="" id="banner-img" width="100%">
+                    <h1 id="section-banner-heading">India's No. 1 online bus ticket booking site
+                    </h1>
+
+                </div>
+                <div class="box-container">
+                    <div class="box">
+                        <div class="box-one-three-div">
+                            <div class="items-in-input">
+                                <img src="./assets/train-icon.png" alt="train-icon" width="40" class="one">
+                                <input type="text" placeholder="from" id="input1">
+
+                            </div>
+                            <div class="items-in-input">
+                                <input type="text" placeholder="to" id="input2">
+                                <img src="./assets/train-icon.png" alt="" width="40" class="one">
+                            </div>
+                            <div class="items-in-input">
+                                <input type="date" id="input3">
+                                <div class="btn-div">
+                                    <button>Tomorrow</button>
+                                    <button>Today</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="women-box">
+                            <img src="./assets/women-icon.png" alt="woomen" width="50">
+                            <div style="display: flex; flex-direction: column;">
+                                <p>Booking for wome</p><img src="" alt="">
+                                <a href="#">click me</a>
+                            </div>
+                            <img src="./assets/toggle.png" alt="" width="40">
+                        </div>
+                    </div>
+                    <div class="btn-div-search">
+                        <div class="red-btn">
+                            <button class="btn-s">search buses</button>
+                            <img src="./assets/icon.jpg" alt="s-icon" width="30" id="s-iccon">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="main-part-deviode">
+                <div class="one-item-container">
+                    <div class="one-item">
+                        <img src="./assets/newTrain.svg" alt="icon" width="40">
+                        <div>
+                            <p style="font-size: 30px; font-weight: bold; line-height: 1.3;">Book trains for festivals
+                            </p>
+                            <span style="font-size: 18px; line-height: 1.3; color: gray;">Book now to get confirmed
+                                ticket</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-section-1-content">
+                    <div class="one-item-btn-1">
+                        <p style="font-size: 18px;color: gray;">Get ₹100 off using code ?<span
+                                style="color: rgb(17, 110, 17); font-size: 20px; font-weight: bold;">FESTIVE</span></p>
+                    </div>
+                    <div class="one-item-btn-1">Sep</div>
+                    <div class="one-item-btn-1">Oct</div>
+                    <div class="one-item-btn-1" id="Boot-tRAIN">
+                        <img src="./assets/train-icon.png" alt="train" width="40" style=" mix-blend-mode: multiply;">
+                        <p>Book trains now</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="section-end-part1">
+                    <img src="./assets/HomeBanner.webp" alt="" width="100%" height="250px">
+                    <div class="etxt-content">
+                        <div>
+                            <p style="font-size: 35px ;font-weight: bold;">25,000+ people booked from Indore</p>
+                            <p style="font-size: 18px;">on redBus last month</p>
+                        </div>
+                        <img src="./assets/socialProofingDefault.svg" alt="" width="300" height="200px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- section no2 -->
+        <section>
+
+            <div class="section2-wrapper">
+                <div class="section2-wrapper-container">
+                    <span style="font-size: xx-large;">Offers for you </span>
+                    <button style="text-decoration: underline; color: blue;">View more</button>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- section no3 -->
+        <section>
+            <div class="section3-main-container">
+                <div class="sec3-container">
+                    <div class="wrapper-sec3-1">
+                        <div class="sec3-contentBox1">
+                           <button>All</button> 
+                        </div>
+                        <div class="sec3-contentBox2">
+                       <button>Bus</button> 
+                        </div>
+                        <div class="sec3-contentBox3">
+                            <button>Train</button></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- section-4  card 1 -->
+
+        <div class="sec4-wrapper">
+            <div class="section4_main">
+                 <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section4_main">
+                 <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section4_main">
+               <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <!-- section-5  -->
+
+        <div class="sec5-wrapper">
+            <div class="sec5">
+                What's new
+            </div>
+        </div>
+
+
+        <div class="sec4-wrapper">
+            <div class="section4_main">
+                <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+            
+                
+
+            </div>
+
+            <div class="section4_main">
+                <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section4_main">
+                <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- section-6 -->
+        <div class="sec5-wrapper">
+            <div class="sec5">
+                Government Buses
+            </div>
+
+            <div class="sec4-wrapper">
+                <div class="section4_main">
+                    <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="section4_main">
+                     <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="section4_main">
+                    <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+
+            <!-- section-7 -->
+            <div class="sec5-wrapper">
+                <div class="sec5">
+                    Testinomials <br>
+                    <p style="font-size: large; color: grey;">Hear From our customers in their own words</p>
+                </div>
+
+                <div class="sec4-wrapper">
+                    <div class="section4_main">
+                         <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+                    </div>
+
+                    <div class="section4_main">
+                         <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+                    </div>
+
+                    <div class="section4_main">
+                       <div class="imgdiv">
+                    
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+                    </div>
+                </div>
+
+                <!-- section-8 -->
+                <div class="sec5-wrapper">
+                    <div class="sec5" style="font-family: sans-serif; font-size: 25px;">
+                        Get the redBus App
+                    </div>
+
+                    <div class="sec-8-div1">
+                        <div class="sec-8-div1-container">
+                            <img src="./assets/10283.png" alt="img" width="40"">
+                </div class=" sec-8-title-container">
+
+                            <div class="warp-title">
+                                <span>Rated 4.6 on Play Store</span>
+                                <span style="font-size: 14px;">Download for exciting offers! </span>
+                            </div>
+
+                            <button>Download app</button>
+                        </div>
+
+
+                        <!-- section 9 -->
+
+                        <div class="sec-9-outer">
+                            <div class="sec-9-inner">
+                                <h2 style="font-size: 22px; font-family: sans-serif;">Online Bus Ticket Booking on
+                                    redBus</h2>
+                            </div>
+
+                            <div class="sec9-para1">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque sint perspiciatis
+                                    provident velit voluptatibus harum ab nulla dolor enim laudantium. Dolor repellat
+                                    officiis, quae eius fuga ut quia iusto eaque.
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vitae quia nihil
+                                    fugit itaque. Et expedita nobis, sit omnis cumque laudantium assumenda voluptatibus
+                                    mollitia iste atque dignissimos ex sed facere.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus
+                                    mollitia, repellendus ipsa, laudantium eligendi reprehenderit totam ea quibusdam
+                                    consectetur aliquid exercitationem animi? Corrupti tenetur velit ea soluta numquam
+                                    nulla!
+
+                                </p>
+                            </div>
+
+                            <div class="sec9-para1">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque sint perspiciatis
+                                    provident velit voluptatibus harum ab nulla dolor enim laudantium. Dolor repellat
+                                    officiis, quae eius fuga ut quia iusto eaque.
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vitae quia nihil
+                                    fugit itaque. Et expedita nobis, sit omnis cumque laudantium assumenda voluptatibus
+                                    mollitia iste atque dignissimos ex sed facere.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus
+                                    mollitia, repellendus ipsa, laudantium eligendi reprehenderit totam ea quibusdam
+                                    consectetur aliquid exercitationem animi? Corrupti tenetur velit ea soluta numquam
+                                    nulla!
+
+                                </p>
+                            </div>
+
+                            <div class="sec9-para1">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque sint perspiciatis
+                                    provident velit voluptatibus harum ab nulla dolor enim laudantium. Dolor repellat
+                                    officiis, quae eius fuga ut quia iusto eaque.
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt vitae quia nihil
+                                    fugit itaque. Et expedita nobis, sit omnis cumque laudantium assumenda voluptatibus
+                                    mollitia iste atque dignissimos ex sed facere.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores ducimus
+                                    mollitia, repellendus ipsa, laudantium eligendi reprehenderit totam ea quibusdam
+                                    consectetur aliquid exercitationem animi? Corrupti tenetur velit ea soluta numquam
+                                    nulla!
+
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <!-- section 10 -->
+                        <div class="sec-9-inner">
+                            <h2 style="font-size: 22px; font-family: sans-serif;">Online Bus Ticket Booking on redBus
+                            </h2>
+                        </div>
+
+
+                        <div class="sec9-para1">
+
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+
+                        </div>
+
+                        <div class="sec9-para1">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque sint perspiciatis
+                                provident velit voluptatibus harum ab nulla dolor enim laudantium. Dolor repellat
+                                officiis, quae eius fuga ut quia iusto eaque.
+                            </p>
+                        </div>
+
+
+                        <!-- section 11 -->
+                        <div class="sec-9-inner">
+                            <h2 style="font-size: 22px; font-family: sans-serif;">Online Bus Ticket Booking on redBus
+                            </h2>
+                        </div>
+
+
+                        <div class="sec9-para1">
+
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+                            <p> <strong>heading</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                Tenetur modi, repellat, similique nulla nisi aperiam dolorum quos dolor unde praesentium
+                                ab dolorem enim molestias consequuntur alias recusandae quae vero ipsum. </p>
+
+                        </div>
+
+                        <div class="sec9-para1">
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque sint perspiciatis
+                                provident velit voluptatibus harum ab nulla dolor enim laudantium. Dolor repellat
+                                officiis, quae eius fuga ut quia iusto eaque.
+                            </p>
+                        </div>
+
+
+                        <!-- section 12 -->
+
+                        <div class="sec-9-inner">
+                            <h2 style="font-size: 22px; font-family: sans-serif;">Bus Booking redDeals on redBus</h2>
+                        </div>
+
+
+                        <div class="sec-9-inner">
+                            <p style="color: grey; font-size: large;">Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Totam doloribus, et porro nobis vel quaerat eum a harum. Nobis
+                                voluptatem vero obcaecati temporibus totam. Ipsam officia corrupti cumque inventore
+                                consequatur!</p>
+                        </div>
+
+
+                        <div class="sec-8-div1">
+                            <div class="sec-8-div1-container">
+                                <img src="./assets/bus.png" alt="img" width="40"">
+                </div class=" sec-8-title-container">
+
+                                <div class="warp-title">
+                                    <span>Unlock Unbeatable Exculsive redDeals! <span style="color: red;">20 %
+                                            off</span></span>
+                                    <span style="font-size: 14px;">4546 Deals . 3434 Bus operatoes . 4646w3 Routes
+                                    </span>
+                                </div>
+
+                                <button style="background-color: red; border-radius: 25%;">Book now</button>
+                            </div>
+
+
+
+                            <!-- footer -->
+
+
+
+
+                           <footer>
+  <div class="footer-container">
+    
+    <div class="footer-column">
+      <strong>About redBus</strong>
+      <a href="#">Contact us</a>
+      <a href="#">Sitemap</a>
+      <a href="#">Offers</a>
+      <a href="#">Careers</a>
+    </div>
+
+    <div class="footer-column">
+      <strong>Info</strong>
+      <a href="#">T&amp;C</a>
+      <a href="#">Privacy policy</a>
+      <a href="#">Blog</a>
+      <a href="#">Bus operator registration</a>
+      <a href="#">Agent registration</a>
+      <a href="#">Insurance partner</a>
+      <a href="#">User agreement</a>
+      <a href="#">Primo Bus</a>
+      <a href="#">Bus Timetable</a>
+      <a href="#">Report Security Issues</a>
+    </div>
+
+    <div class="footer-column">
+      <strong>Global Sites</strong>
+      <a href="#">India</a>
+      <a href="#">Singapore</a>
+      <a href="#">Malaysia</a>
+      <a href="#">Indonesia</a>
+      <a href="#">Peru</a>
+      <a href="#">Colombia</a>
+      <a href="#">Cambodia</a>
+      <a href="#">Vietnam</a>
+    </div>
+
+    <div class="footer-column">
+      <strong>Our Partners</strong>
+      <a href="#">Goibibo Bus</a>
+      <a href="#">Goibibo Hotels</a>
+      <a href="#">Makemytrip Hotels</a>
+    </div>
+  </div>
+
+
+   
+  </div>
+</footer>
+ 
+</body>
+
+</html>
