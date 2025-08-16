@@ -337,28 +337,62 @@
     margin-right: 20px;
     margin-left: 20px;
     justify-content: space-between;
+    font-weight: 700;
 }
 
-/* section - 3  */
-.section3-main-container{
-    display: flex;
-    
+.section2-wrapper-container button{
+    font-weight: 700;      /* Makes text bold */
+    border-radius: 25px;      /* Removes all rounded corners (square button) */
+    padding: 10px 20px;    /* Adds comfortable spacing */
+    border: 1px solid #000; /* Adds thin black border */
+    background-color: #fff; /* White background */
+    color: #000;           /* Black text color */
+    cursor: pointer;       /* Changes cursor to pointer on hover */
+    font-size: 19px;       /* Standard readable font size */
+
 }
 
-.sec3-contentBox1 button{
-    border-radius: 5px;
-    padding: 10px;
-    background-color: ;
+/* section - 3 */
+.section3-main-container {
+    width: 100%;
+    background: white;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-.wrapper-sec3-1{
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
+.sec3-container {
     width: 90%;
-    margin-left: 110px;
+    margin: 0 auto;
 }
 
+.wrapper-sec3-1 {
+    display: flex;
+    margin-left: 15px;
+}
+
+.sec3-contentBox1, 
+.sec3-contentBox2, 
+.sec3-contentBox3 {
+    margin-right: 10px;
+}
+
+.wrapper-sec3-1 button {
+    padding: 8px 25px;
+    border: none;
+    background: #f2f2f2;
+    background-color: #FED9D5;
+    border-radius: 10px;
+    font-size: 20px;
+    font: bold;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* For the active button (selected one) */
+.wrapper-sec3-1 button.active {
+    background: black;
+    color: white;
+}
 
 /* section-4 */
 .section4_main{
@@ -393,11 +427,12 @@
 }
 .sec5{
     width: 90%;
-    margin-left: 25px;
+    margin-left: 95px;
     margin-top: 25px;
 
     font-family: sans-serif;
-    font-size: 22px;
+    font-size: xx-large;
+    font-weight: 700;
 }
 
 .imgdiv{
@@ -422,40 +457,83 @@ border-radius: 10px;
     border-radius: 50px;
     width: 30%;
 }
-/* section 8 */
+/* section 8 - App Download Card */
+.app-download-card {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    width: 90%;
+    height: 90px;
+    margin: 20px auto;
+    padding: 20px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-.sec-8-div1{
-    background-color: aliceblue;
+
+
+.app-content {
     display: flex;
-    justify-content: center;
-    align-content: center;
     align-items: center;
     justify-content: space-between;
-    margin: 40px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-.sec-8-title-container{
-    display: flex;
-    flex-direction: column;
-    background-color: pink;
-    justify-content: center;
-    align-items: center;
+    gap: 15px;
+    object-fit: fill;
 }
 
-.warp-title{
+.app-icon {
+    background-color: #d84e55;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.app-info {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
+}
+
+.rating {
     font-size: 16px;
-    flex-direction: column;
-    /* background-color: yellow; */
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.offer-text {
+    font-size: 20px;
+    color: #666;
+}
+
+.download-btn {
+    background-color: #d84e55;
+    color: white;
+    border: none;
+    padding: 10px 60px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.download-btn:hover {
+    background-color: #c23a42;
 }
 
 
 /* section -9  */
 
 .sec-9-inner{
+    margin: 0 auto;
     margin-left: 30px;
     margin-top: 20px;
+}
+.sec-9-inner h2{
+    margin: 0 auto;
+    width: 94%;
 }
 
 .sec9-para1{
@@ -467,46 +545,60 @@ border-radius: 10px;
     font-family: sans-serif;
     display: flex;
     width: 95%;
-    margin-left: 30px;
+    margin: 0 auto;
+    width: 90%;
+
 }
 
+/* Footer Styles */
+.redbus-footer {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
 
-
-/* Footer */
 .footer-container {
-  display: flex;
-  justify-content: space-around;
-  /* background-color: #e9e9f1; */
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .footer-column {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
 }
 
-.footer-column strong {
-  margin-bottom: 10px;
+.footer-column h3 {
+    color: #d84e55; /* redBus brand color */
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
 }
 
 .footer-column a {
-  color: blue;
-  text-decoration: none;
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 8px;
+    transition: color 0.3s;
 }
 
 .footer-column a:hover {
-  text-decoration: underline;
+    color: #d84e55;
 }
 
 .footer-bottom {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-  background-color: #e9e9f1;
-  justify-content: center;
-  flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    text-align: center;
 }
-
