@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Form Test</title>
+   <!-- Your CSS stylesheet link can stay here -->
+</head>
+<body>
+
+  <h2>Contact Us</h2>
+
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required><br><br>
+    <input type="email" id="email" placeholder="Your Email" required><br><br>
+    <textarea id="message" placeholder="Your Message" required></textarea><br><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Supabase JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script>
+    // Init Supabase Client 
+
+    const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+      e.preventDefault();  // prevent page reload
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Insert data into contact_messages table
+      const { data, error } = await client.from('contact').insert([
+        { name: name, email: email, message: message }
+      ]);
+
+      if (error) {
+        console.error("Insert Error:", error);
+        alert("Something went wrong!");
+      } else {
+        console.log("Inserted:", data);
+        alert("Message Saved to Supabase!");
+        // clear form:
+        document.getElementById('contactForm').reset();
+      }
+    });
+  </script>
+</body>
+</html>
