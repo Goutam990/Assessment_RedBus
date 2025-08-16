@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bus Ticket Booking Online at Cheapest Price with Top Bus Operators- redBus</title>
-    <link rel="icon" type="image/x-icon" href="./assets/logo.png">
-    <link rel="stylesheet" href="./style.css">
-</head>
-
-<body>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bus Ticket Booking Online at Cheapest Price with Top Bus Operators- redBus</title>
+        <link rel="icon" type="image/x-icon" href="./assets/logo.png">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    
+    <body>
+    <!-- Supabase JS Client (CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="app.js"></script>
+    <script src="config.js"></script>
     <div class="main-container">
         <!-- navbar section -->
         <div class="navbar-container">
@@ -38,12 +42,12 @@
                     <div class="right-images-icon">
 
                         <img src="./assets/help.png" alt="menu" width="50">
-                        <p>Help</p>
+                               <a href="./contact.html">Contact Us</a>
                     </div>
                     <div class="right-images-icon">
 
                         <img src="./assets/account.png" alt="" width="40">
-                        <p>Account</p>
+                        <a href="./login.html">Sign up</a>
                     </div>
                 </div>
             </div>
@@ -154,13 +158,14 @@
                 <div class="sec3-container">
                     <div class="wrapper-sec3-1">
                         <div class="sec3-contentBox1">
-                           <button>All</button> 
+                            <button>All</button>
                         </div>
                         <div class="sec3-contentBox2">
-                       <button>Bus</button> 
+                            <button>Bus</button>
                         </div>
                         <div class="sec3-contentBox3">
-                            <button>Train</button></div>
+                            <button>Train</button>
+                        </div>
                     </div>
 
                 </div>
@@ -171,8 +176,8 @@
 
         <div class="sec4-wrapper">
             <div class="section4_main">
-                 <div class="imgdiv">
-                    
+                <div class="imgdiv">
+
                     <img src="./assets/innerdivimg.png" alt="">
                     <div class="divtext">
                         <h1>Save up to 500 off bus tickets</h1>
@@ -184,8 +189,8 @@
             </div>
 
             <div class="section4_main">
-                 <div class="imgdiv">
-                    
+                <div class="imgdiv">
+
                     <img src="./assets/innerdivimg.png" alt="">
                     <div class="divtext">
                         <h1>Save up to 500 off bus tickets</h1>
@@ -196,8 +201,8 @@
             </div>
 
             <div class="section4_main">
-               <div class="imgdiv">
-                    
+                <div class="imgdiv">
+
                     <img src="./assets/innerdivimg.png" alt="">
                     <div class="divtext">
                         <h1>Save up to 500 off bus tickets</h1>
@@ -223,22 +228,7 @@
         <div class="sec4-wrapper">
             <div class="section4_main">
                 <div class="imgdiv">
-                    
-                    <img src="./assets/innerdivimg.png" alt="">
-                    <div class="divtext">
-                        <h1>Save up to 500 off bus tickets</h1>
-                        <p>Valid till 31 Augs</p>
-                        <button>Red500</button>
-                    </div>
-                </div>
-            
-                
 
-            </div>
-
-            <div class="section4_main">
-                <div class="imgdiv">
-                    
                     <img src="./assets/innerdivimg.png" alt="">
                     <div class="divtext">
                         <h1>Save up to 500 off bus tickets</h1>
@@ -247,11 +237,26 @@
                     </div>
                 </div>
 
+
+
             </div>
 
             <div class="section4_main">
                 <div class="imgdiv">
-                    
+
+                    <img src="./assets/innerdivimg.png" alt="">
+                    <div class="divtext">
+                        <h1>Save up to 500 off bus tickets</h1>
+                        <p>Valid till 31 Augs</p>
+                        <button>Red500</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section4_main">
+                <div class="imgdiv">
+
                     <img src="./assets/innerdivimg.png" alt="">
                     <div class="divtext">
                         <h1>Save up to 500 off bus tickets</h1>
@@ -273,40 +278,40 @@
             <div class="sec4-wrapper">
                 <div class="section4_main">
                     <div class="imgdiv">
-                    
-                    <img src="./assets/innerdivimg.png" alt="">
-                    <div class="divtext">
-                        <h1>Save up to 500 off bus tickets</h1>
-                        <p>Valid till 31 Augs</p>
-                        <button>Red500</button>
-                    </div>
-                </div>
 
-                </div>
-
-                <div class="section4_main">
-                     <div class="imgdiv">
-                    
-                    <img src="./assets/innerdivimg.png" alt="">
-                    <div class="divtext">
-                        <h1>Save up to 500 off bus tickets</h1>
-                        <p>Valid till 31 Augs</p>
-                        <button>Red500</button>
+                        <img src="./assets/innerdivimg.png" alt="">
+                        <div class="divtext">
+                            <h1>Save up to 500 off bus tickets</h1>
+                            <p>Valid till 31 Augs</p>
+                            <button>Red500</button>
+                        </div>
                     </div>
-                </div>
 
                 </div>
 
                 <div class="section4_main">
                     <div class="imgdiv">
-                    
-                    <img src="./assets/innerdivimg.png" alt="">
-                    <div class="divtext">
-                        <h1>Save up to 500 off bus tickets</h1>
-                        <p>Valid till 31 Augs</p>
-                        <button>Red500</button>
+
+                        <img src="./assets/innerdivimg.png" alt="">
+                        <div class="divtext">
+                            <h1>Save up to 500 off bus tickets</h1>
+                            <p>Valid till 31 Augs</p>
+                            <button>Red500</button>
+                        </div>
                     </div>
+
                 </div>
+
+                <div class="section4_main">
+                    <div class="imgdiv">
+
+                        <img src="./assets/innerdivimg.png" alt="">
+                        <div class="divtext">
+                            <h1>Save up to 500 off bus tickets</h1>
+                            <p>Valid till 31 Augs</p>
+                            <button>Red500</button>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -321,41 +326,41 @@
 
                 <div class="sec4-wrapper">
                     <div class="section4_main">
-                         <div class="imgdiv">
-                    
-                    <img src="./assets/innerdivimg.png" alt="">
-                    <div class="divtext">
-                        <h1>Save up to 500 off bus tickets</h1>
-                        <p>Valid till 31 Augs</p>
-                        <button>Red500</button>
-                    </div>
-                </div>
+                        <div class="imgdiv">
+
+                            <img src="./assets/innerdivimg.png" alt="">
+                            <div class="divtext">
+                                <h1>Save up to 500 off bus tickets</h1>
+                                <p>Valid till 31 Augs</p>
+                                <button>Red500</button>
+                            </div>
+                        </div>
 
                     </div>
 
                     <div class="section4_main">
-                         <div class="imgdiv">
-                    
-                    <img src="./assets/innerdivimg.png" alt="">
-                    <div class="divtext">
-                        <h1>Save up to 500 off bus tickets</h1>
-                        <p>Valid till 31 Augs</p>
-                        <button>Red500</button>
-                    </div>
-                </div>
+                        <div class="imgdiv">
+
+                            <img src="./assets/innerdivimg.png" alt="">
+                            <div class="divtext">
+                                <h1>Save up to 500 off bus tickets</h1>
+                                <p>Valid till 31 Augs</p>
+                                <button>Red500</button>
+                            </div>
+                        </div>
 
                     </div>
 
                     <div class="section4_main">
-                       <div class="imgdiv">
-                    
-                    <img src="./assets/innerdivimg.png" alt="">
-                    <div class="divtext">
-                        <h1>Save up to 500 off bus tickets</h1>
-                        <p>Valid till 31 Augs</p>
-                        <button>Red500</button>
-                    </div>
-                </div>
+                        <div class="imgdiv">
+
+                            <img src="./assets/innerdivimg.png" alt="">
+                            <div class="divtext">
+                                <h1>Save up to 500 off bus tickets</h1>
+                                <p>Valid till 31 Augs</p>
+                                <button>Red500</button>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
@@ -548,56 +553,58 @@
 
 
 
-                           <footer>
-  <div class="footer-container">
-    
-    <div class="footer-column">
-      <strong>About redBus</strong>
-      <a href="#">Contact us</a>
-      <a href="#">Sitemap</a>
-      <a href="#">Offers</a>
-      <a href="#">Careers</a>
-    </div>
+                            <footer>
+                                <div class="footer-container">
 
-    <div class="footer-column">
-      <strong>Info</strong>
-      <a href="#">T&amp;C</a>
-      <a href="#">Privacy policy</a>
-      <a href="#">Blog</a>
-      <a href="#">Bus operator registration</a>
-      <a href="#">Agent registration</a>
-      <a href="#">Insurance partner</a>
-      <a href="#">User agreement</a>
-      <a href="#">Primo Bus</a>
-      <a href="#">Bus Timetable</a>
-      <a href="#">Report Security Issues</a>
-    </div>
+                                    <div class="footer-column">
+                                        <strong>About redBus</strong>
+                                        <a href="#">Contact us</a>
+                                        <a href="#">Sitemap</a>
+                                        <a href="#">Offers</a>
+                                        <a href="#">Careers</a>
+                                    </div>
 
-    <div class="footer-column">
-      <strong>Global Sites</strong>
-      <a href="#">India</a>
-      <a href="#">Singapore</a>
-      <a href="#">Malaysia</a>
-      <a href="#">Indonesia</a>
-      <a href="#">Peru</a>
-      <a href="#">Colombia</a>
-      <a href="#">Cambodia</a>
-      <a href="#">Vietnam</a>
-    </div>
+                                    <div class="footer-column">
+                                        <strong>Info</strong>
+                                        <a href="#">T&amp;C</a>
+                                        <a href="#">Privacy policy</a>
+                                        <a href="#">Blog</a>
+                                        <a href="#">Bus operator registration</a>
+                                        <a href="#">Agent registration</a>
+                                        <a href="#">Insurance partner</a>
+                                        <a href="#">User agreement</a>
+                                        <a href="#">Primo Bus</a>
+                                        <a href="#">Bus Timetable</a>
+                                        <a href="#">Report Security Issues</a>
+                                    </div>
 
-    <div class="footer-column">
-      <strong>Our Partners</strong>
-      <a href="#">Goibibo Bus</a>
-      <a href="#">Goibibo Hotels</a>
-      <a href="#">Makemytrip Hotels</a>
-    </div>
-  </div>
+                                    <div class="footer-column">
+                                        <strong>Global Sites</strong>
+                                        <a href="#">India</a>
+                                        <a href="#">Singapore</a>
+                                        <a href="#">Malaysia</a>
+                                        <a href="#">Indonesia</a>
+                                        <a href="#">Peru</a>
+                                        <a href="#">Colombia</a>
+                                        <a href="#">Cambodia</a>
+                                        <a href="#">Vietnam</a>
+                                    </div>
+
+                                    <div class="footer-column">
+                                        <strong>Our Partners</strong>
+                                        <a href="#">Goibibo Bus</a>
+                                        <a href="#">Goibibo Hotels</a>
+                                        <a href="#">Makemytrip Hotels</a>
+                                    </div>
+                                </div>
 
 
-   
-  </div>
-</footer>
- 
+
+                        </div>
+                        </footer>
+
+
+
 </body>
 
 </html>

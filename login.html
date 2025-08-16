@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Signup</title>
+</head>
+<body>
+  <h2>Signup</h2>
+  <form id="signupForm">
+    <input type="email" id="signupEmail" placeholder="Email" required><br><br>
+    <input type="password" id="signupPassword" placeholder="Password" required><br><br>
+    <button type="submit">Sign Up</button>
+  </form>
+
+  <h2>Login</h2>
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email" required><br><br>
+    <input type="password" id="loginPassword" placeholder="Password" required><br><br>
+    <button type="submit">Login</button>
+  </form>
+
+  <!-- Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="config.js"></script>
+  <script>
+    const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    // Signup handler
+    document.getElementById('signupForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = document.getElementById('signupEmail').value;
+      const password = document.getElementById('signupPassword').value;
+
+      const { data, error } = await client.auth.signUp({
+        email: email,
+        password: password
+      });
+
+      if (error) {
+        alert("Signup error: " + error.message);
+      } else {
+        alert("Signup successful! Please check your email (maybe) or login now.");
+      }
+    });
+
+    // Login handler
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = document.getElementById('loginEmail').value;
+      const password = document.getElementById('loginPassword').value;
+
+      const { data, error } = await client.auth.signInWithPassword({
+        email: email,
+        password: password
+      });
+
+      if (error) {
+        alert("Login failed: " + error.message);
+      } else {
+        alert("Login successful!");
+        console.log("User session -> ", data);
+        // optionally redirect here
+      }
+    });
+  </script>
+</body>
+</html>
