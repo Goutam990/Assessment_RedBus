@@ -1,4 +1,4 @@
-# RedBus Clone - Full Stack (Full_Stack)
+# RedBus Clone - Full Stack 
 ## Live :- https://redbus-fullstack.netlify.app/
 
 This is a full-stack clone of the RedBus website built using **HTML, CSS, and JavaScript** for the frontend and backend SB services such as Authentication and Database.
